@@ -1,6 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:save/pages/member_page.dart';
 import 'package:save/pages/saving_history.dart';
 
 void main() {

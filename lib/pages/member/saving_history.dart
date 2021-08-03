@@ -30,11 +30,11 @@ class _SavingHistoryState extends State<SavingHistory> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
-            label: 'Business',
+            label: 'Saving',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
-            label: 'School',
+            label: 'Loan',
           ),
         ],
         currentIndex: _selectedIndex,
@@ -138,7 +138,7 @@ class _SavingHistoryState extends State<SavingHistory> {
               itemCount: 16,
               itemBuilder: (ctx, index) {
                 return const ListTile(
-                  title: Text("Monday 21st July"),
+                  title: Text("Monday, 21st July"),
                   subtitle: Text("8,000 RWF"),
                 );
               },

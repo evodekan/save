@@ -1,8 +1,12 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:save/pages/member_page.dart';
-import 'package:save/pages/saving_history.dart';
+import 'package:save/pages/admin/dasboard.dart';
+import 'package:save/pages/admin/home.dart';
+import 'package:save/pages/admin/loans.dart';
+import 'package:save/pages/member/loan.dart';
+import 'package:save/pages/admin/members.dart';
+import 'package:save/pages/member/saving_history.dart';
 
 void main() {
   runApp(
@@ -26,7 +30,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: const SavingHistory(),
+      home: const HomeAdminPage(),
     );
   }
 }

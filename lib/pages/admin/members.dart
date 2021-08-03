@@ -24,9 +24,6 @@ class _MembersPageState extends State<MembersPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Members"),
-        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           tooltip: 'Add member',

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:save/models/member.dart';
+import 'package:save/pages/member/new_member.dart';
 
 class MembersPage extends StatefulWidget {
   const MembersPage({Key? key}) : super(key: key);
@@ -25,7 +26,11 @@ class _MembersPageState extends State<MembersPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (contex) {
+              return const NewMemberPage();
+            }));
+          },
           tooltip: 'Add member',
           child: const Icon(Icons.group_add),
         ),

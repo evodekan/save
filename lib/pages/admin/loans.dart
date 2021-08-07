@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:save/models/member.dart';
+import 'package:save/pages/admin/newloan.dart';
 
 class LoansPage extends StatefulWidget {
   const LoansPage({Key? key}) : super(key: key);
@@ -85,7 +86,11 @@ class _LoansPageState extends State<LoansPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (contex) {
+            return const NewLoan();
+          }));
+        },
         tooltip: 'Add member',
         child: const Icon(Icons.group_add),
       ),

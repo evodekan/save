@@ -1,6 +1,8 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:save/pages/Authauntication/signin.dart';
+import 'package:save/pages/Authauntication/signup.dart';
 import 'package:save/pages/admin/dasboard.dart';
 import 'package:save/pages/admin/home.dart';
 import 'package:save/pages/admin/loans.dart';

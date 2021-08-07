@@ -26,32 +26,34 @@ class _HomeAdminPageState extends State<HomeAdminPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages.elementAt(_selectedIndex),
+      backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.green,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Dashboard',
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.group),
             label: 'Members',
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
             label: 'Savings',
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
             label: 'Loans',
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.white,
           ),
         ],
         currentIndex: _selectedIndex,
-        // selectedItemColor: Colors.white,
+        selectedItemColor: Colors.green,
+        unselectedItemColor: Colors.grey,
         onTap: (int index) {
           setState(() {
             _selectedIndex = index;

@@ -1,20 +1,24 @@
+import 'dart:io';
+
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:save/pages/admin/dasboard.dart';
-import 'package:save/pages/admin/home.dart';
-import 'package:save/pages/admin/loans.dart';
+import 'package:flutter/services.dart';
 import 'package:save/pages/member/loan.dart';
-import 'package:save/pages/admin/members.dart';
-import 'package:save/pages/member/saving_history.dart';
 
 void main() {
   runApp(
     DevicePreview(
-      enabled: !kReleaseMode,
+      // enabled: !kReleaseMode,
+      enabled: false,
       builder: (context) => const MyApp(),
     ),
   );
+  if (Platform.isAndroid) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      systemNavigationBarColor: Colors.white,
+    ));
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -30,7 +34,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: const HomeAdminPage(),
+      home: const LoanPage(),
     );
   }
 }

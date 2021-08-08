@@ -10,38 +10,10 @@ class SavingHistory extends StatefulWidget {
 }
 
 class _SavingHistoryState extends State<SavingHistory> {
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.green,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Saving',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Loan',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.white,
-        onTap: _onItemTapped,
-      ),
-      body: Column(
+    return SafeArea(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
@@ -61,7 +33,7 @@ class _SavingHistoryState extends State<SavingHistory> {
                           ),
                         ),
                         Text(
-                          "50000",
+                          "50,000 RWF",
                           style: TextStyle(
                             fontSize: 20,
                           ),
@@ -81,7 +53,7 @@ class _SavingHistoryState extends State<SavingHistory> {
                           ),
                         ),
                         Text(
-                          "240000",
+                          "240,000 RWF",
                           style: TextStyle(
                             fontSize: 20,
                           ),
@@ -108,7 +80,7 @@ class _SavingHistoryState extends State<SavingHistory> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: const [
                         Text(
-                          "260000",
+                          "260,000 RWF",
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,

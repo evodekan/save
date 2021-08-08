@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:save/pages/admin/savings.dart';
 
 import 'dasboard.dart';
-import 'loans.dart';
-import 'members.dart';
+import 'loan.dart';
+import 'saving_history.dart';
 
-class HomeAdminPage extends StatefulWidget {
-  const HomeAdminPage({Key? key}) : super(key: key);
+class HomeMemberPage extends StatefulWidget {
+  const HomeMemberPage({Key? key}) : super(key: key);
 
   @override
-  _HomeAdminPageState createState() => _HomeAdminPageState();
+  _HomeMemberPageState createState() => _HomeMemberPageState();
 }
 
-class _HomeAdminPageState extends State<HomeAdminPage> {
+class _HomeMemberPageState extends State<HomeMemberPage> {
   int _selectedIndex = 0;
 
   final List<Widget> pages = const [
     DashboardPage(),
-    MembersPage(),
-    SavingsPage(),
-    LoansPage(),
+    SavingHistory(),
+    LoanPage(),
   ];
 
   @override
@@ -31,26 +29,22 @@ class _HomeAdminPageState extends State<HomeAdminPage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Dashboard',
-            backgroundColor: Colors.green,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.group),
-            label: 'Members',
+            label: 'Home',
             backgroundColor: Colors.green,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
-            label: 'Savings',
+            label: 'Saving',
             backgroundColor: Colors.green,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
-            label: 'Loans',
+            label: 'Loan',
             backgroundColor: Colors.green,
           ),
         ],
         currentIndex: _selectedIndex,
+        selectedItemColor: Colors.white,
         onTap: (int index) {
           setState(() {
             _selectedIndex = index;

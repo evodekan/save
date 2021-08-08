@@ -10,22 +10,10 @@ class LoansPage extends StatefulWidget {
   _LoansPageState createState() => _LoansPageState();
 }
 
-List<Member> members = [
-  Member("Evode", "0783832990"),
-  Member("Evode", "0783832990"),
-  Member("Evode", "0783832990"),
-  Member("Evode", "0783832990"),
-  Member("Evode", "0783832990"),
-  Member("Evode", "0783832990"),
-  Member("Evode", "0783832990"),
-  Member("Evode", "0783832990"),
-  Member("Evode", "0783832990"),
-];
-
 class _LoansPageState extends State<LoansPage> {
   final List<Widget> _loansWidgets = [
     ListView.builder(
-      itemCount: members.length,
+      itemCount: 17,
       itemBuilder: (context, index) {
         return ListTile(
           onTap: () {},
@@ -37,14 +25,14 @@ class _LoansPageState extends State<LoansPage> {
               color: Colors.green,
             ),
           ),
-          title: Text(members.elementAt(index).names),
-          subtitle: Text(members[index].phone),
+          title: Text("Kanuma Evode"),
+          subtitle: Text("87,500 RWF"),
           trailing: const Icon(Icons.more_vert),
         );
       },
     ),
     ListView.builder(
-      itemCount: members.length,
+      itemCount: 17,
       itemBuilder: (context, index) {
         return ListTile(
           onTap: () {},
@@ -56,14 +44,14 @@ class _LoansPageState extends State<LoansPage> {
               color: Colors.green,
             ),
           ),
-          title: Text(members.elementAt(index).names),
-          subtitle: Text(members[index].phone),
+          title: Text("Kanuma Evode"),
+          subtitle: Text("87,500 RWF"),
           trailing: const Icon(Icons.more_vert),
         );
       },
     ),
     ListView.builder(
-      itemCount: members.length,
+      itemCount: 17,
       itemBuilder: (context, index) {
         return ListTile(
           onTap: () {},
@@ -75,12 +63,12 @@ class _LoansPageState extends State<LoansPage> {
               color: Colors.green,
             ),
           ),
-          title: Text(members.elementAt(index).names),
-          subtitle: Text(members[index].phone),
+          title: Text("Kanuma Evode"),
+          subtitle: Text("87,500 RWF"),
           trailing: const Icon(Icons.more_vert),
         );
       },
-    )
+    ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -92,115 +80,120 @@ class _LoansPageState extends State<LoansPage> {
           }));
         },
         tooltip: 'Add member',
-        child: const Icon(Icons.group_add),
+        child: const Icon(Icons.add),
       ),
-      body: DefaultTabController(
-        length: 3,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Material(
-              elevation: 3,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(16),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  "Interest rate",
-                                  style: TextStyle(
-                                    fontSize: 20,
+      body: SafeArea(
+        child: DefaultTabController(
+          length: 3,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Material(
+                elevation: 3,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  Text(
+                                    "Interest rate",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
                                   ),
-                                ),
-                                Text(
-                                  "100000",
-                                  style: TextStyle(
-                                    fontSize: 20,
+                                  Text(
+                                    "15%",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 8,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  "Total Amount",
-                                  style: TextStyle(
-                                    fontSize: 20,
+                                ],
+                              ),
+                              const SizedBox(
+                                height: 8,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  Text(
+                                    "Total Amount",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
                                   ),
-                                ),
-                                Text(
-                                  "240000",
-                                  style: TextStyle(
-                                    fontSize: 20,
+                                  Text(
+                                    "240,000 RWF",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const SizedBox(
-                              height: 12,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  "Interest",
-                                  style: TextStyle(
-                                    fontSize: 20,
+                                ],
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              const SizedBox(
+                                height: 12,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  Text(
+                                    "Interest",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
                                   ),
-                                ),
-                                Text(
-                                  "240000",
-                                  style: TextStyle(
-                                    fontSize: 20,
+                                  Text(
+                                    "240,000 RWF",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ],
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  const TabBar(
-                    labelColor: Colors.black,
-                    labelStyle: TextStyle(
-                      fontSize: 16,
+                    const TabBar(
+                      labelColor: Colors.black,
+                      labelStyle: TextStyle(
+                        fontSize: 16,
+                      ),
+                      tabs: [
+                        Tab(
+                          text: "All",
+                        ),
+                        Tab(
+                          text: "Paid",
+                        ),
+                        Tab(
+                          text: "Unpaid",
+                        ),
+                      ],
                     ),
-                    tabs: [
-                      Tab(
-                        text: "All",
-                      ),
-                      Tab(
-                        text: "Paid",
-                      ),
-                      Tab(
-                        text: "Unpaid",
-                      ),
-                    ],
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            Flexible(
-              child: TabBarView(
-                children: _loansWidgets,
-              ),
-            )
-          ],
+              Flexible(
+                child: TabBarView(
+                  children: _loansWidgets,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

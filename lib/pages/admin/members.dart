@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:save/models/member.dart';
-import 'package:save/pages/member/new_member.dart';
+import 'package:save/pages/Authauntication/profile.dart';
+import 'package:save/pages/admin/new_member.dart';
 
 class MembersPage extends StatefulWidget {
   const MembersPage({Key? key}) : super(key: key);
@@ -11,15 +12,15 @@ class MembersPage extends StatefulWidget {
 
 class _MembersPageState extends State<MembersPage> {
   List<Member> members = [
-    Member("Evode", "0783832990"),
-    Member("Evode", "0783832990"),
-    Member("Evode", "0783832990"),
-    Member("Evode", "0783832990"),
-    Member("Evode", "0783832990"),
-    Member("Evode", "0783832990"),
-    Member("Evode", "0783832990"),
-    Member("Evode", "0783832990"),
-    Member("Evode", "0783832990"),
+    Member("Evode Kanuma", "0783832990"),
+    Member("Evode Kanuma", "0783832990"),
+    Member("Evode Kanuma", "0783832990"),
+    Member("Evode Kanuma", "0783832990"),
+    Member("Evode Kanuma", "0783832990"),
+    Member("Evode Kanuma", "0783832990"),
+    Member("Evode Kanuma", "0783832990"),
+    Member("Evode Kanuma", "0783832990"),
+    Member("Evode Kanuma", "0783832990"),
   ];
 
   @override
@@ -38,13 +39,17 @@ class _MembersPageState extends State<MembersPage> {
           itemCount: members.length,
           itemBuilder: (context, index) {
             return ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (contex) {
+                  return const ProfilePage();
+                }));
+              },
               leading: Container(
                 width: 50,
                 height: 50,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.green,
+                  color: Colors.grey,
                 ),
               ),
               title: Text(members.elementAt(index).names),

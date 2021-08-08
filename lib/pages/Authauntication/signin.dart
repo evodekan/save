@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:save/pages/admin/home.dart';
+import 'package:save/pages/member/home.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -58,14 +60,25 @@ class _SignInPageState extends State<SignInPage> {
                           const EdgeInsets.symmetric(vertical: 20),
                         ),
                       ),
-                      onPressed: () {},
+                      onLongPress: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (contex) {
+                          return const HomeMemberPage();
+                        }));
+                      },
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (contex) {
+                          return const HomeAdminPage();
+                        }));
+                      },
                       child: const Text("Login"),
                     ),
                   ),
                 ],
               ),
               const SizedBox(
-                height: 32,
+                height: 64,
               ),
             ],
           ),

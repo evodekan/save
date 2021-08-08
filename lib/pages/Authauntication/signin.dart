@@ -12,50 +12,63 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
-      padding: const EdgeInsets.all(32),
-      child: Form(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const SizedBox(
-              height: 70,
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
-                labelText: "Phone Number",
-                hintText: "Your Number",
-                border: OutlineInputBorder(),
+      padding: const EdgeInsets.symmetric(horizontal: 32),
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        child: Form(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Expanded(
+                child: Container(),
               ),
-            ),
-            const SizedBox(
-              height: 32,
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
-                labelText: "New Password",
-                hintText: "New Password",
-                border: OutlineInputBorder(),
+              const Text(
+                "Logo",
+                style: TextStyle(fontSize: 32),
               ),
-            ),
-            const SizedBox(
-              height: 32,
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                      padding: MaterialStateProperty.all(
-                        const EdgeInsets.symmetric(vertical: 20),
-                      ),
-                    ),
-                    onPressed: () {},
-                    child: const Text("Login"),
-                  ),
+              Expanded(
+                child: Container(),
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: "Phone Number",
+                  hintText: "Your Number",
+                  border: OutlineInputBorder(),
                 ),
-              ],
-            ),
-          ],
+              ),
+              const SizedBox(
+                height: 32,
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: "New Password",
+                  hintText: "New Password",
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              const SizedBox(
+                height: 32,
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        padding: MaterialStateProperty.all(
+                          const EdgeInsets.symmetric(vertical: 20),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Login"),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 32,
+              ),
+            ],
+          ),
         ),
       ),
     ));

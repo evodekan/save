@@ -14,12 +14,24 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         // appBar: AppBar(title: const Text("New Member")),
+
         body: SingleChildScrollView(
       padding: const EdgeInsets.all(32),
       child: Form(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Container(
+              width: 60,
+              height: 60,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.green,
+              ),
+            ),
+            const SizedBox(
+              height: 32,
+            ),
             TextFormField(
               decoration: const InputDecoration(
                 labelText: "Your names",
